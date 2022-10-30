@@ -6,6 +6,7 @@ import Create from './components/View/Create'
 import View from './components/View/View'
 import NoPage from './components/View/NoPage';
 
+// All routes
 function App() {
   return (
     <BrowserRouter>
