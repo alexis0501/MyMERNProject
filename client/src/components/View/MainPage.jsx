@@ -21,29 +21,29 @@ const MainPage = () => {
 
     return ( 
     <div>
-        {/* Navbar */}
-        <div className='navbar d-flex'>
-            <h1 className='text-white margin-left-nav nav-h1-text'>Car Dealership</h1>
-            <Link className='margin-left-link-nav nav-link button' to={'/create'}>Sell a Car</Link>
-        </div>
         
-        <div className='home-container'>
-            
+        <nav className='navbar bg-secondary'>
+            <h1>Car wiki</h1>
+            <Link className='btn btn-outline-dark' to={'/home'}>Home</Link>
+            <Link className='btn btn-outline-dark' to={'/create'}>Create Car Post</Link>
+        </nav>  
+        
+        <h1 className='text-center mt-1'>A place where car enthusiasts share car media</h1>
             {
                 car.map((cars) =>{
-                    return ( <div className='box' key={cars._id}>
-                                <div className='display-car image-adj' id='displaying-car'>
-                                    <img className='image-hover' id='image-size' src={cars.image} alt='car' ></img>
-                                    <Link className='image-text' to={'/view/' + cars._id} style={{color: cars.color}} >{cars.brand},{cars.model}</Link>
-                                    <p className='image-text2'>Miles:{cars.mileage}</p>
-                                    <p className='image-text3'>Year:{cars.year}</p>
+                    return ( <div className='container con-max mt-3 p-3 rounded ' style={{ border: "2px solid" , borderColor: cars.color }} key={cars._id}>
+                                <div className='card-body' >
+                                    <img className='card-img-top image-hover' id='image-size' src={cars.image} alt='car' ></img>
+                                    <br/>
+                                    <h5 className='card-title mt-2' style={{color: cars.color}} >{cars.brand} {cars.model}</h5>
+                                    <p className='card-text'>Miles:{cars.mileage}</p>
+                                    <p className='card-text'>Year:{cars.year}</p>
+                                    <Link className='btn' to={'/view/' + cars._id} style={{backgroundColor: cars.color}}>View More</Link>
                                 </div>
                             </div>
                     )
                 })
             }
-
-        </div>
     </div>
     )
 }

@@ -70,36 +70,34 @@ const Create = () => {
     
     return (
     <div>
-        {/* Navbar */}
-        <div className='navbar d-flex'>
-            <h1 className='text-white margin-left-nav nav-h1-text'>Sell your car here!</h1>
-            <Link className='margin-left-link-nav-create nav-link button' to={'/home'}>Main Page</Link>
-        </div>
-        
-        <form className='container d-flex' onSubmit={createCar}>
+        <nav className='navbar bg-secondary'>
+            <h1>Car wiki</h1>
+            <Link className='btn btn-outline-dark' to={'/home'}>Home</Link>
+            <Link className='btn btn-outline-dark' to={'/create'}>Create Car Post</Link>
+        </nav>
+
+        <form className='container d-flex border border-primary mt-5' onSubmit={createCar}>
             {/* LEFT SIDE */}
-                <div className='Left-box-create'>
-                    <h1 className='margin-top-box'>Brand:</h1> 
-                    <input className='input-box' onChange={(e) => setBrand(e.target.value)} value={brand} />
-                    <h1 className='margin-top-box'>Model:</h1> 
-                    <input className='input-box' onChange={(e) => setModel(e.target.value)} value={model} />
-                    <h1 className='margin-top-box'>Year:</h1> 
-                    <input className='input-box' onChange={(e) => setYear(e.target.value)} value={year} />
-                    <h1 className='margin-top-box'>Image:</h1> 
-                    <input className='input-box' onChange={(e) => setImage(e.target.value)} value={image} />
+                <div className='container border border-success p-3'>
+                    <label className='form-label mt-3'>Brand:</label> 
+                        <input className='form-control' onChange={(e) => setBrand(e.target.value)} value={brand} />
+                    <label className='form-label mt-3'>Model:</label> 
+                        <input className='form-control' onChange={(e) => setModel(e.target.value)} value={model} />
+                    <label className='form-label mt-3'>Year:</label> 
+                        <input className='form-control' onChange={(e) => setYear(e.target.value)} value={year} />
+                    <label className='form-label mt-3'>Image:</label> 
+                        <input className='form-control' onChange={(e) => setImage(e.target.value)} value={image} />
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div className='Right-box-create'>
-                    <h1 className='margin-top-box'>Price:</h1> 
-                    <input className='input-box'  type='number' onChange={(e) => setPrice(e.target.value)} value={price} />
-                    <h1 className='margin-top-box'>Mileage:</h1> 
-                    <input className='input-box' onChange={(e) => setMileage(e.target.value)} value={mileage} />
-                    <h1 className='margin-top-box'>Color:</h1> 
-                    <input className='input-box' onChange={(e) => setColor(e.target.value)} value={color} />
-                    <h4 className='margin-top-box'>Put vehicle on auction</h4>
-                    <p className='margin-top-btn'>⬇️</p>
-                    <button className='margin-top-btn cta margin-left-submit'>Submit</button>
+                <div className='container border border-success p-3 ms-3'>
+                    <label className='form-label mt-3'>Price:</label> 
+                        <input className='form-control'  type='number' onChange={(e) => setPrice(e.target.value)} value={price} />
+                    <label className='form-label mt-3'>Mileage:</label> 
+                        <input className='form-control' onChange={(e) => setMileage(e.target.value)} value={mileage} />
+                    <label className='form-label mt-3'>Color:</label> 
+                        <input className='form-control' onChange={(e) => setColor(e.target.value)} value={color} />
+                    <button className='btn btn-primary w-100 mt-5'>Submit</button>
                 </div>
                 {errors.map((err, index) => <p style={{color: "red"}} key={index}>{err}</p>)}
         </form>

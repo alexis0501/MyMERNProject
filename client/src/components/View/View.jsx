@@ -30,7 +30,6 @@ const View = () => {
         </div>
         
         <div className='container d-flex'>
-            
             <div className='Left-box-create'>
                 <img className='car-image-position car-image-size image-hover' src={car.image} alt='car' />
             </div>
