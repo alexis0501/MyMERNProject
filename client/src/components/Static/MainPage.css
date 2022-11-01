@@ -1,5 +1,5 @@
 .con-max{
-    max-width: 400px; 
+    max-width: 350px; 
 }
 
 #image-size{
@@ -9,4 +9,8 @@
 .image-hover:hover{
     transform: scale(1.1);
     transition: transform 1s;
+}
+
+.f-wrap{
+    flex-wrap: wrap;
 }

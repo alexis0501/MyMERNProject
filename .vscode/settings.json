@@ -1,24 +1,25 @@
 // VS code theme (ignore)
+
 {
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#1a1a1a",
-        "activityBar.activeBorder": "#00adfd",
+        "activityBar.activeBorder": "#ba00fd",
         "activityBar.background": "#1a1a1a",
-        "activityBar.foreground": "#00adfd",
-        "activityBar.inactiveForeground": "#00adfd",
-        "activityBarBadge.background": "#00adfd",
+        "activityBar.foreground": "#ba00fd",
+        "activityBar.inactiveForeground": "#ba00fd",
+        "activityBarBadge.background": "#ba00fd",
         "activityBarBadge.foreground": "#e7e7e7",
-        "panel.border": "#00adfd",
+        "panel.border": "#ba00fd",
         "sash.hoverBorder": "#1a1a1a",
-        "sideBar.border": "#00adfd",
+        "sideBar.border": "#ba00fd",
         "statusBar.background": "#000000",
-        "statusBar.foreground": "#00adfd",
+        "statusBar.foreground": "#ba00fd",
         "statusBarItem.hoverBackground": "#1a1a1a",
         "statusBarItem.remoteBackground": "#000000",
         "statusBarItem.remoteForeground": "#e7e7e7",
-        "titleBar.activeBackground": "#00adfd",
+        "titleBar.activeBackground": "#ba00fd",
         "titleBar.activeForeground": "#e7e7e7",
         "titleBar.inactiveBackground": "#00000099",
-        "titleBar.inactiveForeground": "#00adfd"
+        "titleBar.inactiveForeground": "#ba00fd"
     }
 }

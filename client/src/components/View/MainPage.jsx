@@ -29,9 +29,10 @@ const MainPage = () => {
         </nav>  
         
         <h1 className='text-center mt-1'>A place where car enthusiasts share car media</h1>
+        <div className='container border border-primary d-flex f-wrap'>
             {
                 car.map((cars) =>{
-                    return ( <div className='container con-max mt-3 p-3 rounded ' style={{ border: "2px solid" , borderColor: cars.color }} key={cars._id}>
+                    return ( <div className='card con-max mt-3 p-3 rounded' style={{ border: "2px solid" , borderColor: cars.color }} key={cars._id}>
                                 <div className='card-body' >
                                     <img className='card-img-top image-hover' id='image-size' src={cars.image} alt='car' ></img>
                                     <br/>
@@ -44,6 +45,8 @@ const MainPage = () => {
                     )
                 })
             }
+    
+    </div>
     </div>
     )
 }
