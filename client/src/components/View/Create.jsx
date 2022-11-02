@@ -75,8 +75,9 @@ const Create = () => {
             <Link className='btn btn-outline-dark' to={'/home'}>Home</Link>
             <Link className='btn btn-outline-dark' to={'/create'}>Create Car Post</Link>
         </nav>
-
-        <form className='container d-flex border border-primary mt-5' onSubmit={createCar}>
+        
+        <h1 className='text-center mt-3'>Create a Car Post!</h1>
+        <form className='container d-flex border border-primary mt-3' onSubmit={createCar}>
             {/* LEFT SIDE */}
                 <div className='container border border-success p-3'>
                     <label className='form-label mt-3'>Brand:</label> 

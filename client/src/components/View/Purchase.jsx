@@ -70,7 +70,7 @@ const Purchase = () => {
                     </div>
                     <p>CVV:<input className='card-input text-box-small' id='m-right'  /></p>
                 </div>
-                <button className='cta' onClick={() => deleteCar(car._id)}>PURCHASE</button>
+                <button className='btn btn-primary' onClick={() => deleteCar(car._id)}>PURCHASE</button>
             </div>
         </div>
     </div>

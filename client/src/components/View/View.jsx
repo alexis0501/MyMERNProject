@@ -24,17 +24,19 @@ const View = () => {
     
     return (
     <div>
-        <div className='navbar d-flex'>
-            <h1 className='text-white margin-left-nav-view nav-h1-text'>Now Viewing {car.brand} , {car.model}</h1>
-            <Link className='margin-left-link-nav-view nav-link button' to={'/home'}>Main Page</Link>
-        </div>
+        <nav className='navbar bg-secondary'>
+            <h1>Car wiki</h1>
+            <Link className='btn btn-outline-dark' to={'/home'}>Home</Link>
+            <Link className='btn btn-outline-dark' to={'/create'}>Create Car Post</Link>
+        </nav>
         
-        <div className='container d-flex'>
-            <div className='Left-box-create'>
+        <h1 className='text-center text-capitalize'>Now viewing, <span style={{color: car.color}}>{car.brand}, {car.model}</span> </h1>
+        <div className='container mt-5'>
+            <div>
                 <img className='car-image-position car-image-size image-hover' src={car.image} alt='car' />
             </div>
 
-            <div className='Right-box-create'>
+            <div>
                 <h3 className='margin-top-box'>Brand: {car.brand}</h3>                
                 <h3 className='margin-top-box'>Model: {car.model}</h3>
                 <h3 className='margin-top-box'>Year: {car.year}</h3>
