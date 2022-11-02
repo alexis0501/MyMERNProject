@@ -31,22 +31,19 @@ const View = () => {
         </nav>
         
         <h1 className='text-center text-capitalize'>Now viewing, <span style={{color: car.color}}>{car.brand}, {car.model}</span> </h1>
-        <div className='container mt-5'>
-            <div>
-                <img className='car-image-position car-image-size image-hover' src={car.image} alt='car' />
-            </div>
-
-            <div>
-                <h3 className='margin-top-box'>Brand: {car.brand}</h3>                
-                <h3 className='margin-top-box'>Model: {car.model}</h3>
-                <h3 className='margin-top-box'>Year: {car.year}</h3>
-                <h3 className='margin-top-box'>Price: {car.price}</h3>
-                <h3 className='margin-top-box'>Mileage: {car.mileage}</h3>
-                <h3 className='margin-top-box'>Color: {car.color}</h3>
-                <Link className='button2' to={'/purchase/' + car._id}>Purchase</Link>
+        
+        <div className="container con-max rounded p-2" style={{ border: "2px solid" , borderColor: car.color }}>
+            <img className='image-hover' src={car.image} alt='car' />
+            <div className='container border border-info'>
+                <h3 className='text-capitalize mt-3'>Brand: {car.brand}</h3>                
+                <h3 className='text-capitalize' mt-3>Model: {car.model}</h3>
+                <h3 className=' mt-3'>Year: {car.year}</h3>
+                <h3 className=' mt-3'>Price: {car.price}</h3>
+                <h3 className=' mt-3'>Mileage: {car.mileage}</h3>
+                <h3 className='text-capitalize mt-3'>Car Color: <span style={{color: car.color}}>{car.color}</span> </h3>
+                <Link className='btn' style={{backgroundColor: car.color}} to={'/purchase/' + car._id}>Purchase</Link>
             </div>
         </div>
-    
     </div>
     )
 }
