@@ -1,7 +1,7 @@
 import React from 'react'
 import '../Static/noRoute.css'
 import { Link } from 'react-router-dom'
-
+import HomeIcon from '../Images/HomeIcon.png'
 
 const NoPage = () => {
     return (
@@ -21,6 +21,9 @@ const NoPage = () => {
                     The goal of this website is for car enthusiasts to show off cars and their knowledge/passions.
                     Ranging from JDM to hypercars to good old classics, no category is excluded!
                 </h5>
+                <Link to={'/home'}>
+                    <img src={HomeIcon} alt="Home" />
+                </Link>
             </div>
         </div>
     )
