@@ -5,8 +5,6 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useEffect } from 'react';
 import '../Static/Purchase.css'
-import CardChip from '../Images/CardChip.PNG'
-import TapToPay from '../Images/TapToPay.PNG'
 import { useNavigate } from 'react-router-dom';
 
 const Purchase = () => {
@@ -58,8 +56,6 @@ const Purchase = () => {
                         <h4 className='top-card' id='bank-name'>Unicorn Bank</h4>
                     </div>
                     <div className='d-flex'>
-                        <img id='chip-image' src={CardChip} alt='Card Chip'/>
-                        <img id='tap-image' src={TapToPay} alt='tap' />
                     </div>
                     <div>
                         <p className='input-card'>#<input className='card-input' /></p>
