@@ -34,7 +34,7 @@ const View = () => {
         
         <div className="container con-max rounded p-2" style={{ border: "2px solid" , borderColor: car.color }}>
             <img className='image-hover' src={car.image} alt='car' />
-            <div className='container border border-info'>
+            <div className='container'>
                 <h3 className='text-capitalize mt-3'>Brand: {car.brand}</h3>                
                 <h3 className='text-capitalize' mt-3>Model: {car.model}</h3>
                 <h3 className=' mt-3'>Year: {car.year}</h3>
