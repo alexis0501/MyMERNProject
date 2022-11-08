@@ -77,9 +77,9 @@ const Create = () => {
         </nav>
         
         <h1 className='text-center mt-3'>Create a Car Post!</h1>
-        <form className='container d-flex border border-primary mt-3' onSubmit={createCar}>
+        <form className='container d-flex border border-secondary rounded mt-3' onSubmit={createCar}>
             {/* LEFT SIDE */}
-                <div className='container border border-success p-3'>
+                <div className='container p-3'>
                     <label className='form-label mt-3'>Brand:</label> 
                         <input className='form-control input-focus' onChange={(e) => setBrand(e.target.value)} value={brand} />
                     <label className='form-label mt-3'>Model:</label> 
@@ -92,7 +92,7 @@ const Create = () => {
                 </div>
 
                 {/* RIGHT SIDE */}
-                <div className='container border border-success p-3 ms-3'>
+                <div className='container p-3 ms-3'>
                     <label className='form-label mt-3'>Price:</label> 
                         <input className='form-control input-focus'  type='number' onChange={(e) => setPrice(e.target.value)} value={price} />
                     <label className='form-label mt-3'>Mileage:</label> 
