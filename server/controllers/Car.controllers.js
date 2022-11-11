@@ -3,7 +3,7 @@ const Car = require('../models/Car.models');
 
 module.exports.findAllCars = (req, res) => {
     Car.find()
-        .then(allDaCars => res.json( allDaCars )) //* dont put curly braces
+        .then(allDaCars => res.json( allDaCars )) //* don't put curly braces
         .catch(err => res.json({ message: 'Something went wrong', error: err }));
 }
 
