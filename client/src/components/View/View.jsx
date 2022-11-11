@@ -5,11 +5,14 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate} from "react-router-dom";
 
 const View = () => {
 
     const [car, setCar] =  useState([])
     const {id} = useParams()
+
+    const navigate = useNavigate()
 
     useEffect(() =>{
         axios.get("http://localhost:8000/api/car/" + id)
@@ -20,7 +23,15 @@ const View = () => {
             .catch(err => console.log(err));
     },[]);
 
-
+    const deleteCar = (deleteId) =>{
+        console.log(deleteId);
+        axios.delete("http://localhost:8000/api/car/" + deleteId)
+        .then(res => {
+            console.log(res.data);
+            navigate("/home")
+        })
+        .catch(err => console.log(err))
+    }
     
     return (
     <div>
@@ -36,12 +47,12 @@ const View = () => {
             <img className='image-hover' src={car.image} alt='car' />
             <div className='container'>
                 <h3 className='text-capitalize mt-3'>Brand: {car.brand}</h3>                
-                <h3 className='text-capitalize' mt-3>Model: {car.model}</h3>
+                <h3 className='text-capitalize'>Model: {car.model}</h3>
                 <h3 className=' mt-3'>Year: {car.year}</h3>
                 <h3 className=' mt-3'>Price: {car.price}</h3>
                 <h3 className=' mt-3'>Mileage: {car.mileage}</h3>
                 <h3 className='text-capitalize mt-3'>Car Color: <span style={{color: car.color}}>{car.color}</span> </h3>
-                <Link className='btn' style={{backgroundColor: car.color}} to={'/purchase/' + car._id}>Purchase</Link>
+                <button className='btn' onClick={() => deleteCar(car._id)} style={{backgroundColor: car.color}}>Delete</button>
             </div>
         </div>
     </div>
