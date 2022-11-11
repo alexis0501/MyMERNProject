@@ -28,7 +28,7 @@ const MainPage = () => {
             <Link className='btn btn-outline-dark' to={'/create'}>Create Car Post</Link>
         </nav>  
         
-        <h1 className='text-center mt-1'>A place where car enthusiasts share car media</h1>
+        <h1 className='text-center mt-1'>Car Community Posts</h1>
         <div className='container d-flex f-wrap justify-content-between'>
             {
                 car.map((cars) =>{
