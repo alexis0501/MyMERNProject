@@ -34,7 +34,7 @@ const MainPage = () => {
                 car.map((cars) =>{
                     return ( <div className='card con-max mt-3 p-3 rounded' style={{ border: "2px solid" , borderColor: cars.color }} key={cars._id}>
                                 <div className='card-body' >
-                                    <img className='card-img-top image-hover' id='image-size' src={cars.image} alt='car' ></img>
+                                    <img className=' image-hover' id='image-size' src={cars.image} alt='car' ></img>
                                     <br/>
                                     <h5 className='card-title mt-2' style={{color: cars.color}} >{cars.brand} {cars.model}</h5>
                                     <p className='card-text'>Miles:{cars.mileage}</p>
