@@ -98,7 +98,8 @@ const Create = () => {
                     <label className='form-label mt-3'>Mileage:</label> 
                         <input className='form-control input-focus' onChange={(e) => setMileage(e.target.value)} value={mileage} />
                     <label className='form-label mt-3'>Color:</label> 
-                        <input className='form-control input-focus' onChange={(e) => setColor(e.target.value)} value={color} />
+                        <input type={"color"} className='form-control input-focus' onChange={(e) => setColor(e.target.value)} value={color} />
+                        <span className='text-secondary font-small'>*NOTE: You can either specify a color 'Red' or use a hex '#ff0000'*</span>
                     <button className='btn btn-primary w-100 mt-5'>Submit</button>
                 </div>
                 {errors.map((err, index) => <p style={{color: "red"}} key={index}>{err}</p>)}
