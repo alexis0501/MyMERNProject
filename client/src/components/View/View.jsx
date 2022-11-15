@@ -23,7 +23,6 @@ const View = () => {
     },[]);
 
     const deleteCar = (deleteId) =>{
-        console.log(deleteId);
         axios.delete("http://localhost:8000/api/car/" + deleteId)
         .then(res => {
             console.log(res.data);
