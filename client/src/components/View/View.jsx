@@ -33,7 +33,7 @@ const View = () => {
     
     return (
     <div>
-        <nav className='navbar bg-secondary'>
+        <nav className='navbar bg-light'>
             <h1>Car wiki</h1>
             <Link className='btn btn-outline-dark' to={'/home'}>Home</Link>
             <Link className='btn btn-outline-dark' to={'/create'}>Create Car Post</Link>
