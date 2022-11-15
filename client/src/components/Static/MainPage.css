@@ -1,9 +1,9 @@
 body{
-    background: linear-gradient(
+    /* background: linear-gradient(
         to right, rgb(223, 236, 252), rgb(215, 233, 255), rgb(201, 223, 255)
     );
     background-size: 400% 400%;
-    animation: animate-background 10s infinite ease-in-out;
+    animation: animate-background 10s infinite ease-in-out; */
 }
 
 @keyframes animate-background {
@@ -19,7 +19,7 @@ body{
 }
 
 .con-max{
-    max-width: 350px; 
+
     background: transparent;
 }
 
@@ -34,4 +34,8 @@ body{
 
 .f-wrap{
     flex-wrap: wrap;
+}
+
+@media screen and (max-width : 767px) {
+    
 }

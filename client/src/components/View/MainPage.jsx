@@ -29,6 +29,9 @@ const MainPage = () => {
         </nav>  
         
         <h1 className='text-center mt-1'>Car Community Posts</h1>
+        <div className="container justify-content-center">
+
+
         <div className='container d-flex f-wrap justify-content-between'>
             {
                 car.map((cars) =>{
@@ -45,8 +48,9 @@ const MainPage = () => {
                     )
                 })
             }
-    
     </div>
+        </div>
+    
     </div>
     )
 }
