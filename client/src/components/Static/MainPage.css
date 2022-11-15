@@ -1,10 +1,31 @@
+body{
+    background: linear-gradient(
+        to right, rgb(223, 236, 252), rgb(215, 233, 255), rgb(201, 223, 255)
+    );
+    background-size: 400% 400%;
+    animation: animate-background 10s infinite ease-in-out;
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
 .con-max{
     max-width: 350px; 
+    background: transparent;
 }
 
 #image-size{
-    height: fit-content;
-    width: fit-content;
+    height: 150px;
+    width: 250px;
 }
 .image-hover:hover{
     transform: scale(1.05);
