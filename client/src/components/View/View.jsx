@@ -42,7 +42,7 @@ const View = () => {
         <h1 className='text-center text-capitalize'>Now viewing, <span style={{color: car.color}}>{car.brand}, {car.model}</span> </h1>
         
         <div className="container con-max rounded p-2" style={{ border: "2px solid" , borderColor: car.color }}>
-            <img className='image-hover' src={car.image} alt='car' />
+            <img className='image-hover' id='image-size' src={car.image} alt='car' />
             <div className='container'>
                 <h3 className='text-capitalize mt-3'>Brand: {car.brand}</h3>                
                 <h3 className='text-capitalize'>Model: {car.model}</h3>
