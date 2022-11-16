@@ -88,7 +88,7 @@ const Create = () => {
                         <input className='form-control input-focus' onChange={(e) => setYear(e.target.value)} value={year} />
                     <label className='form-label mt-3'>Image:</label> 
                         <input className='form-control input-focus' onChange={(e) => setImage(e.target.value)} value={image} />
-                        <span className='text-secondary font-small'>*NOTE: When getting an image, click 'open image in new tab', copy & paste into input field*</span>
+                        <span className='text-secondary font-small'>*NOTE: When using an image, click 'open image in new tab', copy & paste into input field*</span>
                 </div>
 
                 {/* RIGHT SIDE */}
@@ -99,11 +99,10 @@ const Create = () => {
                         <input className='form-control input-focus' onChange={(e) => setMileage(e.target.value)} value={mileage} />
                     <label className='form-label mt-3'>Color:</label> 
                         <input type={"color"} className='form-control input-focus' onChange={(e) => setColor(e.target.value)} value={color} />
-                        <span className='text-secondary font-small'>*NOTE: You can either specify a color 'Red' or use a hex '#ff0000'*</span>
                     <button className='btn btn-primary w-100 mt-5'>Submit</button>
                 </div>
-                {errors.map((err, index) => <p style={{color: "red"}} key={index}>{err}</p>)}
         </form>
+            {errors.map((err, index) => <p className='text-center text-danger' key={index}>{err}</p>)}
     </div>
     )
 }
