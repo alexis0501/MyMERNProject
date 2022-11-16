@@ -72,7 +72,7 @@ const Create = () => {
     <div>
         <nav className='navbar bg-light'>
             <h1>Car wiki</h1>
-            <Link className='btn btn-outline-dark' to={'/home'}>Home</Link>
+            <Link className='btn btn-outline-dark' to={'/'}>Home</Link>
             <Link className='btn btn-outline-dark' to={'/create'}>Create Car Post</Link>
         </nav>
         <h1 className='text-center mt-3'>Create a Car Post!</h1>
