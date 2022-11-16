@@ -29,13 +29,13 @@ const MainPage = () => {
         </nav>  
         
         <h1 className='text-center mt-1'>Car Community Posts</h1>
-        <div className="container justify-content-center">
+        <div className="container">
 
 
         <div className='container d-flex f-wrap justify-content-between'>
             {
                 car.map((cars) =>{
-                    return ( <div className='card con-max mt-3 p-3 rounded' style={{ border: "2px solid" , borderColor: cars.color }} key={cars._id}>
+                    return ( <div className='container con-max mt-3 p-3 rounded' style={{ border: "2px solid" , borderColor: cars.color }} key={cars._id}>
                                 <div className='card-body' >
                                     <img className=' image-hover' id='image-size' src={cars.image} alt='car' ></img>
                                     <br/>
